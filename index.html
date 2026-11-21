@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tip Calculator</title>
+<style>
+body{font-family:Arial;background:#fff7ed;padding:25px}
+main{max-width:450px;margin:auto;background:white;padding:30px;border-radius:15px}
+input{width:100%;padding:12px;margin:9px 0;box-sizing:border-box}
+button{width:100%;padding:14px;background:#ea580c;color:white;border:0;border-radius:8px;cursor:pointer}
+#result{background:#ffedd5;padding:20px;margin-top:20px;border-radius:8px;white-space:pre-line;line-height:2}
+</style>
+</head>
+<body>
+<main>
+<h1>Tip Calculator</h1>
+<p>Calculate and split your restaurant bill.</p>
+<label>Bill Amount</label>
+<input id="bill" type="number" min="0" placeholder="Enter bill">
+<label>Tip Percentage</label>
+<input id="tip" type="number" value="10" min="0">
+<label>Number of People</label>
+<input id="people" type="number" value="1" min="1">
+<button onclick="calculate()">Calculate</button>
+<div id="result">Result: --</div>
+</main>
+<script>
+function calculate(){
+ const bill=Number(document.getElementById("bill").value);
+ const tip=Number(document.getElementById("tip").value);
+ const people=Number(document.getElementById("people").value);
+ const out=document.getElementById("result");
+ if(bill<=0||tip<0||people<1||!Number.isInteger(people)){
+  out.textContent="Please enter valid values.";
+  return;
+ }
+ const extra=bill*tip/100;
+ const total=bill+extra;
+ out.textContent="Tip Amount: "+extra.toFixed(2)+
+ "\nTotal Bill: "+total.toFixed(2)+
+ "\nPer Person: "+(total/people).toFixed(2);
+}
+</script>
+</body>
+</html>
