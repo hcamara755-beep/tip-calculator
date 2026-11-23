@@ -1,23 +1,24 @@
-# Tip Calculator
+## Tip Calculation Guide
 
-A tool for calculating restaurant tips and splitting bills.
+This application helps calculate restaurant tips
+and divide bills among multiple people.
 
-## Features
+### Calculation Inputs
+- Original bill amount
+- Tip percentage
+- Number of people
 
-- Tip calculation
+### Calculation Results
+- Tip amount
 - Total bill
-- Per-person payment
+- Individual payment
 
-## How to Use
+### How to Use
+1. Enter the original bill amount.
+2. Select the tip percentage.
+3. Enter the number of people.
+4. Calculate the final payment.
 
-Enter the bill, tip percentage and number of people.
-
-## Technologies
-
-- HTML
-- CSS
-- JavaScript
-
-## Running Locally
-
-Open `index.html` in a modern web browser.
+### Input Validation
+Ensure that the bill amount
+and participant count are valid.
