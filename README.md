@@ -22,3 +22,12 @@ and divide bills among multiple people.
 ### Input Validation
 Ensure that the bill amount
 and participant count are valid.
+## Manual Testing Checklist
+
+- [ ] Calculate a bill with a ten-percent tip.
+- [ ] Check the per-person share for multiple diners.
+- [ ] Reject a participant count of zero.
+
+### Test Notes
+
+Record the observed result and any reproducible issue after running the tests.
